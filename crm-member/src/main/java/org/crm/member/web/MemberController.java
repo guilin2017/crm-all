@@ -1,16 +1,11 @@
 package org.crm.member.web;
 
+
+import com.common.utils.RedisUtil;
+import com.common.web.Result;
+
 import org.crm.member.model.Member;
 import org.crm.member.service.MemberService;
-import org.crm.member.utils.RedisUtil;
-
-import com.common.web.Result;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
