@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.crm.member.dao.MemberMapper">
+  <resultMap id="BaseResultMap" type="org.crm.member.model.Member">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="orgUnitNo" jdbcType="VARCHAR" property="orgunitno" />
+    <result column="pid" jdbcType="INTEGER" property="pid" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="memberTypeId" jdbcType="INTEGER" property="membertypeid" />
+    <result column="memberClassId" jdbcType="INTEGER" property="memberclassid" />
+    <result column="shareSAcc" jdbcType="BIT" property="sharesacc" />
+    <result column="sharePAcc" jdbcType="BIT" property="sharepacc" />
+    <result column="cardNo" jdbcType="VARCHAR" property="cardno" />
+    <result column="saccId" jdbcType="INTEGER" property="saccid" />
+    <result column="salute" jdbcType="VARCHAR" property="salute" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="birthdate" jdbcType="CHAR" property="birthdate" />
+    <result column="lunarBirthday" jdbcType="VARCHAR" property="lunarbirthday" />
+    <result column="constellation" jdbcType="VARCHAR" property="constellation" />
+    <result column="marriage" jdbcType="VARCHAR" property="marriage" />
+    <result column="tel" jdbcType="VARCHAR" property="tel" />
+    <result column="cellphone" jdbcType="VARCHAR" property="cellphone" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="fax" jdbcType="VARCHAR" property="fax" />
+    <result column="zipcode" jdbcType="VARCHAR" property="zipcode" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="userPass" jdbcType="VARCHAR" property="userpass" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="qq" jdbcType="VARCHAR" property="qq" />
+    <result column="weixin" jdbcType="VARCHAR" property="weixin" />
+    <result column="firm" jdbcType="VARCHAR" property="firm" />
+    <result column="firmAddress" jdbcType="VARCHAR" property="firmaddress" />
+    <result column="firmTel" jdbcType="VARCHAR" property="firmtel" />
+    <result column="career" jdbcType="VARCHAR" property="career" />
+    <result column="duty" jdbcType="VARCHAR" property="duty" />
+    <result column="saleOrgUnitNo" jdbcType="VARCHAR" property="saleorgunitno" />
+    <result column="devOrgUnitNo" jdbcType="VARCHAR" property="devorgunitno" />
+    <result column="devOutletId" jdbcType="INTEGER" property="devoutletid" />
+    <result column="salesman" jdbcType="INTEGER" property="salesman" />
+    <result column="maintainer" jdbcType="INTEGER" property="maintainer" />
+    <result column="inputer" jdbcType="VARCHAR" property="inputer" />
+    <result column="inputTime" jdbcType="TIMESTAMP" property="inputtime" />
+    <result column="modifier" jdbcType="VARCHAR" property="modifier" />
+    <result column="modifyTime" jdbcType="TIMESTAMP" property="modifytime" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="language" jdbcType="VARCHAR" property="language" />
+    <result column="nation" jdbcType="VARCHAR" property="nation" />
+    <result column="nativePlace" jdbcType="VARCHAR" property="nativeplace" />
+    <result column="birthPlace" jdbcType="VARCHAR" property="birthplace" />
+    <result column="height" jdbcType="INTEGER" property="height" />
+    <result column="weight" jdbcType="INTEGER" property="weight" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="docType" jdbcType="VARCHAR" property="doctype" />
+    <result column="docNo" jdbcType="VARCHAR" property="docno" />
+    <result column="areaType" jdbcType="VARCHAR" property="areatype" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="effectiveDate" jdbcType="TIMESTAMP" property="effectivedate" />
+    <result column="expireDate" jdbcType="TIMESTAMP" property="expiredate" />
+    <result column="joinDate" jdbcType="TIMESTAMP" property="joindate" />
+    <result column="referrerId" jdbcType="INTEGER" property="referrerid" />
+    <result column="profileId" jdbcType="INTEGER" property="profileid" />
+    <result column="channel" jdbcType="VARCHAR" property="channel" />
+    <result column="specials" jdbcType="VARCHAR" property="specials" />
+    <result column="consumptionTotal" jdbcType="DECIMAL" property="consumptiontotal" />
+    <result column="consumptionTimes" jdbcType="INTEGER" property="consumptiontimes" />
+    <result column="consumptionGap" jdbcType="INTEGER" property="consumptiongap" />
+    <result column="yearlyTimes" jdbcType="INTEGER" property="yearlytimes" />
+    <result column="lastConsumptionDate" jdbcType="TIMESTAMP" property="lastconsumptiondate" />
+    <result column="referenceTimes" jdbcType="INTEGER" property="referencetimes" />
+    <result column="state" jdbcType="CHAR" property="state" />
+    <result column="unsign" jdbcType="BIT" property="unsign" />
+    <result column="remarks" jdbcType="VARCHAR" property="remarks" />
+    <result column="controlUnitNo" jdbcType="VARCHAR" property="controlunitno" />
+  </resultMap>
+</mapper>

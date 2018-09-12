@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Don't forget to set system property -DLog4jContextSelector=org.apache.logging.log4j.core.async.AsyncLoggerContextSelector 
+	to make all loggers asynchronous. -->
+<Configuration status="ERROR">
+	<Appenders>
+		<!-- Async Loggers will auto-flush in batches, so switch off immediateFlush. -->
+		<RollingRandomAccessFile name="RollingFile"
+			fileName="logs/crm-member.log" filePattern="logs/$${date:yyyy-MM}/crm-member-%d{MM-dd-yyyy}-%i.log.gz"
+			immediateFlush="true" append="true">
+			<PatternLayout>
+				<Pattern>${hostName}[%d [%t] %p %c %m %ex]%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="30 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="100">
+				<Delete basePath="logs" maxDepth="2">
+					<IfFileName glob="*/crm-member*.log.gz">
+						<IfLastModified age="30d">
+							<IfAny>
+								<IfAccumulatedFileSize exceeds="60 GB" />
+								<IfAccumulatedFileCount exceeds="10" />
+							</IfAny>
+						</IfLastModified>
+					</IfFileName>
+				</Delete>
+			</DefaultRolloverStrategy>
+		</RollingRandomAccessFile>
+
+		<RollingRandomAccessFile name="debugRollingFile"
+			fileName="logs/crm-member-debug.log" filePattern="logs/$${date:yyyy-MM}/crm-member-debug-%d{MM-dd-yyyy}-%i.log.gz"
+			immediateFlush="false" append="true">
+			<PatternLayout>
+				<Pattern>${hostName}[%d [%t] %p %c %m %ex]%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="20 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="20" />
+		</RollingRandomAccessFile>
+
+		<!-- ${hostName}[%d [%t] %-5level %logger{36} - %msg]%n -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${hostName}[%d [%t] %p %c %m %ex]%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<!-- mybatis 输出sql语句 -->
+   		<Logger name="org.crm.member.dao" level="debug"></Logger>
+		<Root level="info" includeLocation="true" additivity="true">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="debugRollingFile" level="info" />
+			<AppenderRef ref="RollingFile" />
+		</Root>
+	</Loggers>
+	
+
+</Configuration>

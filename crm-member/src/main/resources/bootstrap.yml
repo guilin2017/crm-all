@@ -1,0 +1,9 @@
+spring:
+  cloud:
+      config:
+        discovery:
+          enabled: true
+          serviceId: config-server
+        profile: dev
+        name: eureka-dev,mysql-dev,redis-dev
+        failFast: true #连接配置中心失败快速相应
