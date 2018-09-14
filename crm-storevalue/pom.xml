@@ -41,11 +41,15 @@
 		</dependency>
 		<dependency>
 	        <groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 	    </dependency>
 	    <dependency>
 	    	<groupId>org.springframework.cloud</groupId>
 	    	<artifactId>spring-cloud-starter-ribbon</artifactId>
+	    </dependency>
+		<dependency>
+	        <groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-feign</artifactId>
 	    </dependency>
 	    <dependency>
 			<groupId>io.springfox</groupId>
@@ -96,11 +100,33 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!-- Eureka客户端健康检查交给actuator，进行更加全面的检查维护 -->
+        <!--监控中心-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+	     <dependency>
+		      <groupId>org.springframework.cloud</groupId>
+		      <artifactId>spring-cloud-starter-hystrix</artifactId>
+	     </dependency>
+	     <dependency>
+	     	<groupId>org.springframework.cloud</groupId>
+	     	<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+	     </dependency>
+	     <dependency>
+	     	<groupId>org.springframework.cloud</groupId>
+	     	<artifactId>spring-cloud-starter-config</artifactId>
+	     </dependency>
+	     <!-- 连接配置中心失败的重试机制依赖 begin -->
+	     <dependency>
+	     	<groupId>org.springframework.retry</groupId>
+	     	<artifactId>spring-retry</artifactId>
+	     </dependency>
+	     <dependency>
+	     	<groupId>org.springframework.boot</groupId>
+	     	<artifactId>spring-boot-starter-aop</artifactId>
+	     </dependency>
+	     <!-- 连接配置中心失败的重试机制依赖 end -->
          <dependency>
          	<groupId>com.guilin</groupId>
 			<artifactId>crm-core-beans</artifactId>

@@ -13,16 +13,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-//@SpringBootApplication
-//@EnableEurekaClient
-//@EnableDiscoveryClient
-//@EnableSwagger2
-//@EnableWebMvc
-//@EnableFeignClients(basePackages ="org.crm.core.api.feign")
-//@EnableCaching
-//@ComponentScan("org.crm")
-//@EnableCircuitBreaker//开启断路器功能
-
 @SpringBootApplication
 @ServletComponentScan
 @EnableCircuitBreaker

@@ -2,23 +2,4 @@ server:
    port: 8091
 spring:
    application:
-      name: crm-card
-   datasource:
-      url: jdbc:mysql://127.0.0.1:3306/icrm?useUnicode=true&characterEncoding=utf-8
-      username: root
-      password: 123456
-      driver-class-name: com.mysql.jdbc.Driver
-      max-idle: 10
-      max-wait: 10000
-      min-idle: 5
-      initial-size: 5
-eureka:
-  instance:
-    prefer-ip-address: true
-    status-page-url-path: /swagger-ui.html
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/ 
-    # Eureka客户端健康检查交给actuator，进行更加全面的检查维护
-    healthcheck:
-      enabled: true        
+      name: crm-card       

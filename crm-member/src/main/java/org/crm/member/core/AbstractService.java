@@ -2,6 +2,7 @@ package org.crm.member.core;
 
 import org.apache.ibatis.exceptions.TooManyResultsException;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import tk.mybatis.mapper.entity.Condition;
 
 import java.lang.reflect.Field;

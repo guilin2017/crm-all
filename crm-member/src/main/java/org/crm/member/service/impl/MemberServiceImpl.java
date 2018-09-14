@@ -1,9 +1,9 @@
 package org.crm.member.service.impl;
 
+import org.crm.member.core.AbstractService;
 import org.crm.member.dao.MemberMapper;
 import org.crm.member.model.Member;
 import org.crm.member.service.MemberService;
-import org.crm.member.core.AbstractService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
