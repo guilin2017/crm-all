@@ -25,10 +25,11 @@ public class MemberServiceImpl extends BaseServiceImpl<Member> implements Member
 //    @HystrixCommand(fallbackMethod = "error")
 	@Override
 	public Member selectById(Integer memberId) {
-		// TODO Auto-generated method stub
 		return memberMapper.selectByPrimaryKey(memberId);
 	}
 
+	
+	
     public Member error() {
   	  return new Member();
     }
