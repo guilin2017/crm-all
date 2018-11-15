@@ -1,6 +1,8 @@
 package org.crm.member.config;
 
+import com.common.config.LocationConfig;
 import com.github.pagehelper.PageInterceptor;
+
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -9,13 +11,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import tk.mybatis.spring.mapper.MapperScannerConfigurer;
 
 import javax.sql.DataSource;
+
 import java.util.Properties;
 
 import static org.crm.member.core.ProjectConstant.*;
-
+import com.common.config.LocationConfig;
 /**
  * ${DESCRIPTION}
  *
@@ -60,7 +64,7 @@ public class MybatisConfiguration {
 
         //配置通用Mapper，详情请查阅官方文档
         Properties properties = new Properties();
-        properties.setProperty("mappers", MAPPER_INTERFACE_REFERENCE);
+        properties.setProperty("mappers", LocationConfig.FN_Mapper_Loca);
         properties.setProperty("notEmpty", "false");//insert、update是否判断字符串类型!='' 即 test="str != null"表达式内是否追加 and str != ''
         properties.setProperty("IDENTITY", "MYSQL");
         mapperScannerConfigurer.setProperties(properties);

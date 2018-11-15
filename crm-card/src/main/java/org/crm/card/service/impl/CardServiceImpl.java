@@ -35,8 +35,8 @@ public class CardServiceImpl extends AbstractService<Card> implements CardServic
 	@Override
 	public void issueMemberCard(int memberid) {
 		Result<MemberVO> result = memberRest.selectById(memberid);
-		if (result.isSuccess() && result.getDate() != null) {
-			MemberVO memberVO = result.getDate();
+		if (result.isSuccess() && result.getModel() != null) {
+			MemberVO memberVO = result.getModel();
 		}else {
 			
 		}

@@ -28,15 +28,15 @@ public class MemberController {
 	      Member member = (Member) RedisUtil.get(String.valueOf(id));
 	      System.out.print("Redis:" + member);
 	      if (member == null) {
-	    	  member = memberService.findById(id);
+	    	  member = memberService.selectById(id);
 	    	  if (member == null) {
-		    	  result.setResultMsg("找不到对应的会员！");
+		    	  result.setMessage("找不到对应的会员！");
 		      }else {
 		    	  RedisUtil.set(String.valueOf(id), member, 60);
 		      }
 	      }
 
-    	  result.setDate(member);
+    	  result.setModel(member);
 	      result.setSuccess(true);
 	      return result;
 	  }

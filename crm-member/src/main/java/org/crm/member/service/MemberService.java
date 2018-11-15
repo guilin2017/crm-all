@@ -1,5 +1,5 @@
 package org.crm.member.service;
-import org.crm.member.core.Service;
+import com.common.base.service.Service;
 import org.crm.member.model.Member;
 
 
@@ -9,5 +9,5 @@ import org.crm.member.model.Member;
  */
 public interface MemberService extends Service<Member> {
 
-	public Member selectById(int memberId);
+	public Member selectById(Integer memberId);
 }
