@@ -2,5 +2,6 @@ server:
    port: 8090
    #context-path: /crm-member
 spring:
-   application:
-      name: crm-member 
+  application:
+    name: crm-member 
+      
