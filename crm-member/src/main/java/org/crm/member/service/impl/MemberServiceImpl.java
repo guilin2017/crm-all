@@ -6,7 +6,7 @@ import org.crm.member.service.MemberService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.common.base.service.AbstractService;
+import com.common.base.service.BaseServiceImpl;
 import com.common.web.Result;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
@@ -18,7 +18,7 @@ import javax.annotation.Resource;
  */
 @Service
 @Transactional
-public class MemberServiceImpl extends AbstractService<Member> implements MemberService {
+public class MemberServiceImpl extends BaseServiceImpl<Member> implements MemberService {
     @Resource
     private MemberMapper memberMapper;
 
